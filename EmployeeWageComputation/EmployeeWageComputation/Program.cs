@@ -12,6 +12,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("4 for Employee Wage Switch Case");
             Console.WriteLine("5 for Monthly Wages");
             Console.WriteLine("6 for Employee Wages for hours and days in a month");
+            Console.WriteLine("7 for Employee Wage Method");
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
@@ -40,6 +41,10 @@ namespace EmployeeWageComputation
                     EmpWageHrsDays empWageHrsDays = new EmpWageHrsDays();   
                     empWageHrsDays.CalcWage();
                     break;
+                case 7:
+                    EmpWageMethod empWageMethod = new EmpWageMethod();
+                    empWageMethod.CalculateWage();
+                    break; 
 
             }
         }
