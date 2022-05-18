@@ -8,6 +8,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("Enter a number for a particular problem:");
             Console.WriteLine("1 for checking Employee present or absent");
             Console.WriteLine("2 for Daily Employee Wage");
+            Console.WriteLine("3 for Part time Employee Wage");
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
@@ -20,6 +21,10 @@ namespace EmployeeWageComputation
                     DailyEmpWage dailyEmpWage = new DailyEmpWage();
                     dailyEmpWage.DailyWage();
                     break;
+                case 3:
+                    PartTimeEmpWage partTimeEmpWage = new PartTimeEmpWage();
+                    partTimeEmpWage.PartTimeWage();
+                    break; 
             }
         }
     }
