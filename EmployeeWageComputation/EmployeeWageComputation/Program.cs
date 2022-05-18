@@ -11,6 +11,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("3 for Part time Employee Wage");
             Console.WriteLine("4 for Employee Wage Switch Case");
             Console.WriteLine("5 for Monthly Wages");
+            Console.WriteLine("6 for Employee Wages for hours and days in a month");
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
@@ -34,6 +35,10 @@ namespace EmployeeWageComputation
                 case 5:
                     MonthlyWages monthlyWages = new MonthlyWages();
                     monthlyWages.MonthWage();
+                    break;
+                case 6:
+                    EmpWageHrsDays empWageHrsDays = new EmpWageHrsDays();   
+                    empWageHrsDays.CalcWage();
                     break;
 
             }
