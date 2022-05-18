@@ -13,6 +13,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("5 for Monthly Wages");
             Console.WriteLine("6 for Employee Wages for hours and days in a month");
             Console.WriteLine("7 for Employee Wage Method");
+            Console.WriteLine("8 for Company wage using dictionary");
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
@@ -44,7 +45,14 @@ namespace EmployeeWageComputation
                 case 7:
                     EmpWageMethod empWageMethod = new EmpWageMethod();
                     empWageMethod.CalculateWage();
-                    break; 
+                    break;
+                case 8:
+                    EmpWageComputation empWageComputation = new EmpWageComputation();
+                    empWageComputation.AddCompany("TATA", 20, 8, 4, 100, 20);
+                    empWageComputation.CalcEmpWage("tata");
+                    empWageComputation.AddCompany("MAHINDRA", 30, 8, 4, 100, 20);
+                    empWageComputation.CalcEmpWage("mahindra");
+                    break;
 
             }
         }
