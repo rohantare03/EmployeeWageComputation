@@ -9,6 +9,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("1 for checking Employee present or absent");
             Console.WriteLine("2 for Daily Employee Wage");
             Console.WriteLine("3 for Part time Employee Wage");
+            Console.WriteLine("4 for Employee Wage Switch Case");
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
@@ -24,7 +25,12 @@ namespace EmployeeWageComputation
                 case 3:
                     PartTimeEmpWage partTimeEmpWage = new PartTimeEmpWage();
                     partTimeEmpWage.PartTimeWage();
-                    break; 
+                    break;
+                case 4:
+                    EmpWageSwitch empWageSwitch = new EmpWageSwitch();
+                    empWageSwitch.EmpWage();
+                    break;
+
             }
         }
     }
