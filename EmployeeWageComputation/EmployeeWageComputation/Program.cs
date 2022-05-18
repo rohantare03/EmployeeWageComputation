@@ -15,7 +15,8 @@ namespace EmployeeWageComputation
             Console.WriteLine("7 for Employee Wage Method");
             Console.WriteLine("8 for Company wage using dictionary");
             Console.WriteLine("9 for Total company wage");
-            Console.WriteLine("10 for Employee for multiple companies");
+            Console.WriteLine("10 for Employee wage for multiple companies");
+            Console.WriteLine("11 for Multiples companies using interface");
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
@@ -72,6 +73,17 @@ namespace EmployeeWageComputation
                     computation.WageCalculation("dmart");
                     computation.ViewWage();
                     break;
+                case 11:
+                    Wage_Computation wagecompute = new Wage_Computation(3);
+                    wagecompute.AddCompany("TATA", 20, 8, 4, 100, 20);
+                    wagecompute.WageCalculation("tata");
+                    wagecompute.AddCompany("MAHINDRA", 30, 8, 4, 100, 20);
+                    wagecompute.WageCalculation("mahindra");
+                    wagecompute.AddCompany("DMART", 40, 9, 5, 100, 20);
+                    wagecompute.WageCalculation("dmart");
+                    wagecompute.ViewWage();
+                    break;
+
 
 
 
