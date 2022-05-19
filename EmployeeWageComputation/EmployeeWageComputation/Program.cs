@@ -17,6 +17,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("9 for Total company wage");
             Console.WriteLine("10 for Employee wage for multiple companies");
             Console.WriteLine("11 for Multiples companies using interface");
+            Console.WriteLine("12 for Company Array list");
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
@@ -83,6 +84,18 @@ namespace EmployeeWageComputation
                     wagecompute.WageCalculation("dmart");
                     wagecompute.ViewWage();
                     break;
+                case 12:
+                    Wages_Computation wages_Computation = new Wages_Computation();
+                    wages_Computation.AddCompany("TATA", 20, 8, 4, 100, 20);
+                    wages_Computation.WageCalculation("tata");
+                    wages_Computation.AddCompany("MAHINDRA", 30, 8, 4, 100, 20);
+                    wages_Computation.WageCalculation("mahindra");
+                    wages_Computation.AddCompany("DMART", 40, 8, 5, 100, 20);
+                    wages_Computation.WageCalculation("dmart");
+                    wages_Computation.ViewWage();
+                    break; 
+
+
 
 
 
