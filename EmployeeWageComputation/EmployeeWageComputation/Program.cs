@@ -18,6 +18,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("10 for Employee wage for multiple companies");
             Console.WriteLine("11 for Multiples companies using interface");
             Console.WriteLine("12 for Company Array list");
+            Console.WriteLine("13 for storing daily wage with total wage");
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
@@ -93,7 +94,23 @@ namespace EmployeeWageComputation
                     wages_Computation.AddCompany("DMART", 40, 8, 5, 100, 20);
                     wages_Computation.WageCalculation("dmart");
                     wages_Computation.ViewWage();
-                    break; 
+                    break;
+                case 13:
+                    CompanyWage_Computations computations = new CompanyWage_Computations();
+                    computations.AddCompany("TATA", 20, 8, 4, 100, 20);
+                    computations.WageCalculation("tata");
+                    computations.AddCompany("MAHINDRA", 30, 8, 4, 100, 20);
+                    computations.WageCalculation("mahindra");
+                    computations.AddCompany("DMART", 40, 9, 5, 100, 30);
+                    computations.WageCalculation("dmart");
+                    computations.ViewWage();
+                    break;
+                default:
+                    Console.WriteLine("Enter a valid input");
+                    break;
+                        
+                
+                    
 
 
 
